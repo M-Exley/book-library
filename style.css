@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 10px;
+}
+
+div .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#cards {
+    width: fit-content;
+    height: max(600);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.card {
+    height: 350px;
+    width: 30px;
+    border: dotted 1px brown;
+    align-items: end;
+}
