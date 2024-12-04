@@ -16,13 +16,24 @@ div .form{
     height: max(600);
     border: 1px solid black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1px;
 }
 
 .card {
-    height: 350px;
-    width: 30px;
+    font-size: large;
+    height: fit-content;
+    width: fit-content;
     border: dotted 1px brown;
     align-items: end;
+    padding: 5px 25px 5px 25px;
+}
+
+.card:hover {
+    transform: scale(102%);
+}
+
+.button-delete {
+    font-size: medium;
+    max-width: fit-content;
 }
