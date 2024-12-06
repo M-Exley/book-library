@@ -27,6 +27,8 @@ div .form{
     border: dotted 1px brown;
     align-items: end;
     padding: 5px 25px 5px 25px;
+    display: flex;
+    flex-direction: row;
 }
 
 .card:hover {
@@ -36,4 +38,11 @@ div .form{
 .button-delete {
     font-size: medium;
     max-width: fit-content;
+}
+
+.card::after {
+    content: 'X';
+    padding-left: 10px;
+    font-size: large;
+    color: red;
 }

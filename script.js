@@ -8,12 +8,12 @@ let bookLibrary = [
     pages: 640,
     read: true,
 },
-{
-    title: 'The History of Violence',
-    author:'Steven Pinker',
-    pages: 740,
-    read: false,
-}
+// {
+//     title: 'The History of Violence',
+//     author:'Steven Pinker',
+//     pages: 740,
+//     read: false,
+// }
 
 ];
 // const formInputs = document.querySelectorAll('input[type="text]').value;
@@ -89,7 +89,7 @@ addButton.addEventListener('click', function(e)  {
         cards.appendChild(newCardDiv);
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('button-delete');
-        deleteBtn.textContent = 'Delete Book';
+        const deleteButton = deleteBtn.textContent = 'Delete Book';
         cards.insertAdjacentElement("beforeend", deleteBtn);
         const resString = `${title}, by ${author} is ${pages} long.`
         newCardDiv.textContent = resString;
@@ -109,6 +109,21 @@ clear.addEventListener('click', function(e) {
         bookLibrary = [];
 })
 displayNewCard();
+
+
+// delete individual books 
+let deleteButtonAfter = document.querySelector('button-delete');
+const deleteBtnCheck = function () {
+    if ([...cards.children].some(child => child.tagName.toLowerCase() === 'button')){
+
+        console.log("type is div")
+        
+ } 
+}
+// deleteButtonAfter.addEventListener('click', deleteBtnCheck);
+
+
+
 
 const bookOne = new Book('History of England', 'Lord Macauley', 640, true);
 const bookTwo = new Book('The History of Violence', 'Steven Pinker', 750, true);
