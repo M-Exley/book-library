@@ -65,7 +65,9 @@ addButton.addEventListener('click', function(e)  {
         }
         logBooks();
         displayNewCard();
-         form.reset();}
+         form.reset();
+    
+        }
         }) 
         
         
@@ -87,11 +89,8 @@ addButton.addEventListener('click', function(e)  {
         const newCardDiv = document.createElement('div');
         newCardDiv.classList.add('card');
         cards.appendChild(newCardDiv);
-        const deleteBtn = document.createElement('button');
-        deleteBtn.classList.add('button-delete');
-        const deleteButton = deleteBtn.textContent = 'Delete Book';
-        cards.insertAdjacentElement("beforeend", deleteBtn);
-        const resString = `${title}, by ${author} is ${pages} long.`
+    
+        const resString = `${title}, by ${author} is ${pages} pages long.`
         newCardDiv.textContent = resString;
         
     })
@@ -112,18 +111,8 @@ displayNewCard();
 
 
 // delete individual books 
-let deleteButtonAfter = document.querySelector('button-delete');
-const deleteBtnCheck = function () {
-    if ([...cards.children].some(child => child.tagName.toLowerCase() === 'button')){
-
-        console.log("type is div")
-        
- } 
-}
-// deleteButtonAfter.addEventListener('click', deleteBtnCheck);
-
-
-
+// need to get array index
+const
 
 const bookOne = new Book('History of England', 'Lord Macauley', 640, true);
 const bookTwo = new Book('The History of Violence', 'Steven Pinker', 750, true);
